@@ -31,7 +31,14 @@
     },
     "board_approval_date": {
       "description": "Date on which the board approved the stock class",
-      "$ref": "https://opencaptablecoalition.com/schema/types/Date.schema.json"
+      "oneOf": [
+        {
+          "$ref": "https://opencaptablecoalition.com/schema/types/Date.schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "votes_per_share": {
       "description": "The number of votes each share of this stock class gets",
